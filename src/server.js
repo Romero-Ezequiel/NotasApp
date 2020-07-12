@@ -30,10 +30,8 @@ app.use(express.urlencoded({extended:false}));
 //Variables Globales
 
 //Rutas
-app.get('/', (req, res)=>{
-    //res.send('Hola mundo');
-    res.render('index');
-});
+app.use(require('./routes/index.routes'));
+
 
 //Archivos Estaticos
 app.use(express.static(path.join(__dirname, 'public')));
